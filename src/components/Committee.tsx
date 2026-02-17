@@ -9,7 +9,11 @@ const container = {
 
 const item = {
   hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0, transition: { type: "spring" as const, stiffness: 100, damping: 15 } },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { type: "spring" as const, stiffness: 100, damping: 15 },
+  },
 };
 
 const Committee = () => {
@@ -24,13 +28,15 @@ const Committee = () => {
           transition={{ type: "spring", stiffness: 100 }}
           className="text-center mb-12 md:mb-16"
         >
-          <p className="text-xs tracking-[0.3em] text-primary uppercase mb-3 font-display">The Team</p>
+          <p className="text-xs tracking-[0.3em] text-primary uppercase mb-3 font-display">
+            The Team
+          </p>
           <h2 className="font-display font-black text-3xl md:text-5xl tracking-wider text-foreground">
             ORGANIZING <span className="text-gradient">COMMITTEE</span>
           </h2>
         </motion.div>
 
-        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+        <div className="max-w-6xl mx-auto space-y-10">
           {/* Staff */}
           <motion.div
             variants={container}
@@ -38,10 +44,10 @@ const Committee = () => {
             whileInView="show"
             viewport={{ once: true, margin: "-100px" }}
           >
-            <h3 className="font-display font-bold text-sm tracking-widest text-primary mb-5 uppercase">
+            <h3 className="font-display font-bold text-sm tracking-widest text-primary mb-5 uppercase text-center">
               Staff Coordinators
             </h3>
-            <div className="space-y-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
               {STAFF_COORDINATORS.map((member, i) => (
                 <motion.div
                   key={i}
@@ -51,7 +57,14 @@ const Committee = () => {
                   <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
                     <User className="text-primary" size={18} />
                   </div>
-                  <p className="text-sm md:text-base text-foreground/90 font-medium">{member.name}</p>
+                  <div>
+                    <p className="text-sm md:text-base text-foreground/90 font-medium">
+                      {member.name}
+                    </p>
+                    <p className="text-xs text-muted-foreground flex items-center gap-1 mt-0.5">
+                      <Phone size={10} /> {member.phone}
+                    </p>
+                  </div>
                 </motion.div>
               ))}
             </div>
@@ -64,10 +77,10 @@ const Committee = () => {
             whileInView="show"
             viewport={{ once: true, margin: "-100px" }}
           >
-            <h3 className="font-display font-bold text-sm tracking-widest text-secondary mb-5 uppercase">
+            <h3 className="font-display font-bold text-sm tracking-widest text-secondary mb-5 uppercase text-center">
               Student Coordinators
             </h3>
-            <div className="space-y-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-2xl mx-auto">
               {STUDENT_COORDINATORS.map((member, i) => (
                 <motion.div
                   key={i}
@@ -78,7 +91,9 @@ const Committee = () => {
                     <User className="text-secondary" size={18} />
                   </div>
                   <div>
-                    <p className="text-sm md:text-base text-foreground/90 font-medium">{member.name}</p>
+                    <p className="text-sm md:text-base text-foreground/90 font-medium">
+                      {member.name}
+                    </p>
                     <p className="text-xs text-muted-foreground flex items-center gap-1 mt-0.5">
                       <Phone size={10} /> {member.phone}
                     </p>

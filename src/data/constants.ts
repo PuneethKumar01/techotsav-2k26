@@ -26,7 +26,8 @@ export const EVENTS = [
     team: "2 per team",
     rounds: "3 Rounds",
     fee: "₹300/team",
-    description: "Put your tech & general knowledge to the ultimate test across 3 electrifying rounds.",
+    description:
+      "Put your tech & general knowledge to the ultimate test across 3 electrifying rounds.",
     coordinators: [
       { name: "Amurth Kumar", phone: "8722622761" },
       { name: "Sahana", phone: "8197235527" },
@@ -40,7 +41,8 @@ export const EVENTS = [
     team: "8-10 per team",
     rounds: "Indian Folk",
     fee: "₹500/team",
-    description: "Celebrate Indian folk dance tradition. 5+1 minutes to mesmerize the audience.",
+    description:
+      "Celebrate Indian folk dance tradition. 5+1 minutes to mesmerize the audience.",
     coordinators: [
       { name: "Urvi", phone: "9611292993" },
       { name: "Samyagda", phone: "7259600418" },
@@ -54,7 +56,8 @@ export const EVENTS = [
     team: "1 participant",
     rounds: "3 Rounds",
     fee: "₹150",
-    description: "Showcase your managerial prowess across 3 rounds. Carry updated resumes.",
+    description:
+      "Showcase your managerial prowess across 3 rounds. Carry updated resumes.",
     coordinators: [
       { name: "Sushmitha", phone: "6363589707" },
       { name: "Varshith KS", phone: "7624925507" },
@@ -68,7 +71,8 @@ export const EVENTS = [
     team: "2 per team",
     rounds: "2 Rounds",
     fee: "₹300/team",
-    description: "Design stunning websites using HTML, CSS & JavaScript in a timed challenge.",
+    description:
+      "Design stunning websites using HTML, CSS & JavaScript in a timed challenge.",
     coordinators: [
       { name: "Neha Hegde", phone: "9632614493" },
       { name: "Shivakumar", phone: "9481290878" },
@@ -82,7 +86,8 @@ export const EVENTS = [
     team: "2 per team",
     rounds: "3 Rounds",
     fee: "₹300/team",
-    description: "Battle it out in C, Java, or Python across 3 intense coding rounds.",
+    description:
+      "Battle it out in C, Java, or Python across 3 intense coding rounds.",
     coordinators: [
       { name: "Puneeth", phone: "8088076080" },
       { name: "Kavya", phone: "8762096367" },
@@ -96,7 +101,8 @@ export const EVENTS = [
     team: "1 participant",
     rounds: "3 Rounds",
     fee: "₹150",
-    description: "Shoot cinematic content on-site. Bring your own equipment and creativity.",
+    description:
+      "Shoot cinematic content on-site. Bring your own equipment and creativity.",
     coordinators: [
       { name: "Samith", phone: "9480762153" },
       { name: "Sagar", phone: "6366660598" },
@@ -110,7 +116,8 @@ export const EVENTS = [
     team: "3 per team",
     rounds: "1 Round",
     fee: "₹300/team",
-    description: "Present and launch your innovative product idea. Bring laptops for presentation.",
+    description:
+      "Present and launch your innovative product idea. Bring laptops for presentation.",
     coordinators: [
       { name: "Nishitha", phone: "9353899056" },
       { name: "Adhitya", phone: "8320019796" },
@@ -131,9 +138,9 @@ export const RULES = [
 export const REGISTRATION_DEADLINE = "25th February 2026";
 
 export const STAFF_COORDINATORS = [
-  { name: "Mr. Sagar Rai" },
-  { name: "Ms. Sayed Ansifa" },
-  { name: "Mr. Sebastian PJ" },
+  { name: "Mr. Sagar Rai", phone: "+91 8861520264" },
+  { name: "Ms. Sayed Ansifa", phone: "+91 8792054501" },
+  { name: "Mr. Sebastian PJ", phone: "+91 9945724252" },
 ];
 
 export const STUDENT_COORDINATORS = [

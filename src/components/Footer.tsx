@@ -76,6 +76,22 @@ const Footer = () => {
           ))}
         </motion.div>
 
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ type: "spring", stiffness: 100, delay: 0.2 }}
+          className="text-center mb-8 p-4 rounded-lg bg-white/5 border border-white/10"
+        >
+          <p className="text-xs text-muted-foreground flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2">
+            For technical support, contact{" "}
+            <span className="font-bold">Puneeth:</span>{" "}
+            <span className="text-primary hover:text-primary/80 font-semibold transition-colors">
+              +91 8088076080
+            </span>
+          </p>
+        </motion.div>
+
         <div className="text-center">
           <p className="text-xs text-muted-foreground/50">
             © 2026 TECHOTSAV — Dept of Computer Science, Alva's College,
