@@ -17,7 +17,7 @@ const FOOTER_LINKS = [
   },
   {
     label: "Follow on Instagram",
-    href: "https://www.instagram.com/it.techotsav/",
+    href: "https://www.instagram.com/it.techotsav?igsh=MTB2ejMycmRubGNueg%3D%3D&utm_source=qr",
     icon: Instagram,
     color: "hover:shadow-[0_0_20px_hsl(330_80%_55%/0.4)]",
   },
