@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import { EVENTS } from "@/data/constants";
-import { Users, Layers, IndianRupee, Phone } from "lucide-react";
+import { EVENTS, BROCHURE_URL } from "@/data/constants";
+import { Users, Layers, IndianRupee, Phone, Lightbulb, Download } from "lucide-react";
 
 const container = {
   hidden: { opacity: 0 },
@@ -12,7 +12,11 @@ const container = {
 
 const cardItem = {
   hidden: { opacity: 0, y: 30 },
-  show: { opacity: 1, y: 0, transition: { type: "spring" as const, stiffness: 100, damping: 15 } },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { type: "spring" as const, stiffness: 100, damping: 15 },
+  },
 };
 
 const Events = () => {
@@ -27,7 +31,9 @@ const Events = () => {
           transition={{ type: "spring", stiffness: 100 }}
           className="text-center mb-12 md:mb-16"
         >
-          <p className="text-xs tracking-[0.3em] text-primary uppercase mb-3 font-display">Compete</p>
+          <p className="text-xs tracking-[0.3em] text-primary uppercase mb-3 font-display">
+            Compete
+          </p>
           <h2 className="font-display font-black text-3xl md:text-5xl tracking-wider text-foreground">
             EVENT <span className="text-gradient">TERMINAL</span>
           </h2>
@@ -41,17 +47,23 @@ const Events = () => {
           className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 max-w-6xl mx-auto"
         >
           {EVENTS.map((event) => {
-            const Icon = event.icon;
             return (
               <motion.div
                 key={event.id}
                 variants={cardItem}
-                whileHover={{ y: -6, transition: { type: "spring", stiffness: 300 } }}
+                whileHover={{
+                  y: -6,
+                  transition: { type: "spring", stiffness: 300 },
+                }}
                 className="glass p-5 md:p-6 group hover:border-primary/30 hover:shadow-[0_0_30px_hsl(var(--primary)/0.15)] transition-all duration-500"
               >
                 <div className="flex items-start gap-4 mb-4">
-                  <div className="w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
-                    <Icon className="text-primary" size={20} />
+                  <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors overflow-hidden">
+                    <img
+                      src={event.image}
+                      alt={event.name}
+                      className="w-full h-full object-cover rounded-lg"
+                    />
                   </div>
                   <div>
                     <h3 className="font-display font-bold text-sm md:text-base tracking-wider text-foreground">
@@ -77,10 +89,35 @@ const Events = () => {
                   </span>
                 </div>
 
+                {"problemStatements" in event && event.problemStatements && (
+                  <div className="mb-4">
+                    <p className="text-[10px] uppercase tracking-wider text-muted-foreground mb-2 flex items-center gap-1">
+                      <Lightbulb size={10} className="text-primary" /> Problem
+                      Statements
+                    </p>
+                    <ul className="space-y-1">
+                      {event.problemStatements.map((ps: string, i: number) => (
+                        <li
+                          key={i}
+                          className="text-xs text-foreground/70 flex items-center gap-2"
+                        >
+                          <span className="w-1.5 h-1.5 rounded-full bg-primary/60 shrink-0" />
+                          {ps}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
                 <div className="border-t border-white/5 pt-3">
-                  <p className="text-[10px] uppercase tracking-wider text-muted-foreground mb-1.5">Coordinators</p>
+                  <p className="text-[10px] uppercase tracking-wider text-muted-foreground mb-1.5">
+                    Coordinators
+                  </p>
                   {event.coordinators.map((c, i) => (
-                    <p key={i} className="text-xs text-foreground/60 flex items-center gap-1.5">
+                    <p
+                      key={i}
+                      className="text-xs text-foreground/60 flex items-center gap-1.5"
+                    >
                       <Phone size={10} className="text-primary/50" />
                       {c.name} — {c.phone}
                     </p>
@@ -89,6 +126,25 @@ const Events = () => {
               </motion.div>
             );
           })}
+        </motion.div>
+
+        {/* Brochure Download */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ type: "spring", stiffness: 100, delay: 0.3 }}
+          className="flex justify-center mt-12"
+        >
+          <a
+            href={BROCHURE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-lg bg-primary text-primary-foreground font-display font-bold text-sm tracking-wider hover:bg-primary/90 hover:shadow-[0_0_30px_hsl(var(--primary)/0.4)] transition-all duration-300"
+          >
+            <Download size={18} />
+            DOWNLOAD BROCHURE
+          </a>
         </motion.div>
       </div>
     </section>

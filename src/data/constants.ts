@@ -8,6 +8,14 @@ import {
   Rocket,
 } from "lucide-react";
 
+import quizImg from "@/assets/events/quiz.png";
+import danceImg from "@/assets/events/dance.png";
+import itManagerImg from "@/assets/events/it-manager.png";
+import webDesignImg from "@/assets/events/web-design.png";
+import codingImg from "@/assets/events/coding.png";
+import videoImg from "@/assets/events/video.png";
+import productImg from "@/assets/events/product.png";
+
 export const NAV_LINKS = [
   { label: "Home", to: "hero" },
   { label: "About", to: "about" },
@@ -23,6 +31,7 @@ export const EVENTS = [
     name: "TECH-KNOW",
     subtitle: "IT Quiz",
     icon: Brain,
+    image: quizImg,
     team: "2 per team",
     rounds: "3 Rounds",
     fee: "₹300/team",
@@ -38,6 +47,7 @@ export const EVENTS = [
     name: "RHYTHM",
     subtitle: "Cultural Dance",
     icon: Music,
+    image: danceImg,
     team: "8-10 per team",
     rounds: "Indian Folk",
     fee: "₹500/team",
@@ -53,6 +63,7 @@ export const EVENTS = [
     name: "TECH-TIX",
     subtitle: "IT Manager",
     icon: Briefcase,
+    image: itManagerImg,
     team: "1 participant",
     rounds: "3 Rounds",
     fee: "₹150",
@@ -68,6 +79,7 @@ export const EVENTS = [
     name: "PIXEL-CRAFT",
     subtitle: "Web Designing",
     icon: Globe,
+    image: webDesignImg,
     team: "2 per team",
     rounds: "2 Rounds",
     fee: "₹300/team",
@@ -83,6 +95,7 @@ export const EVENTS = [
     name: "BYTE-BATTLE",
     subtitle: "Coding",
     icon: Code,
+    image: codingImg,
     team: "2 per team",
     rounds: "3 Rounds",
     fee: "₹300/team",
@@ -98,6 +111,7 @@ export const EVENTS = [
     name: "CINE-SCOPE",
     subtitle: "Videography",
     icon: Video,
+    image: videoImg,
     team: "1 participant",
     rounds: "3 Rounds",
     fee: "₹150",
@@ -113,11 +127,18 @@ export const EVENTS = [
     name: "TECH-REVEAL",
     subtitle: "Product Launch",
     icon: Rocket,
+    image: productImg,
     team: "3 per team",
     rounds: "1 Round",
     fee: "₹300/team",
     description:
       "Present and launch your innovative product idea. Bring laptops for presentation.",
+    problemStatements: [
+      "Smart Campus Solution",
+      "Health and Wellness Tech",
+      "AI Automation Tools",
+      "Entertainment and Media Tech",
+    ],
     coordinators: [
       { name: "Nishitha", phone: "9353899056" },
       { name: "Adhitya", phone: "8320019796" },
@@ -149,3 +170,6 @@ export const STUDENT_COORDINATORS = [
 ];
 
 export const CONTACT_EMAIL = "techotsav26@gmail.com";
+
+export const BROCHURE_URL =
+  "https://drive.google.com/uc?export=download&id=1VTBWWA0zX5e7zHEszBpd1NruU3bsuxB-";
