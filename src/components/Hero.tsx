@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 import { ChevronDown, Trophy, CalendarDays, MapPin } from "lucide-react";
-import bgLandscape from "../assets/background_landscape.jpg";
-import bgPortrait from "../assets/background_potrait.jpg";
+import bgLandscape from "../assets/background_landscape.png";
+import bgPortrait from "../assets/background_potrait.png";
 
 const container = {
   hidden: { opacity: 0 },

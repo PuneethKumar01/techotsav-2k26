@@ -1,6 +1,13 @@
 import { motion } from "framer-motion";
 import { EVENTS, BROCHURE_URL } from "@/data/constants";
-import { Users, Layers, IndianRupee, Phone, Lightbulb, Download } from "lucide-react";
+import {
+  Users,
+  Layers,
+  IndianRupee,
+  Phone,
+  Lightbulb,
+  Download,
+} from "lucide-react";
 
 const container = {
   hidden: { opacity: 0 },
