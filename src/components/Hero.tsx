@@ -3,6 +3,7 @@ import { Link } from "react-scroll";
 import { ChevronDown, Trophy, CalendarDays, MapPin } from "lucide-react";
 import bgLandscape from "../assets/background_landscape.png";
 import bgPortrait from "../assets/background_potrait.png";
+import logo from "../assets/logo.png";
 
 const container = {
   hidden: { opacity: 0 },
@@ -58,7 +59,7 @@ const Hero = () => {
           className="mb-4 md:mb-6 flex justify-center"
         >
           <img
-            src="src\assets\logo.png"
+            src={logo}
             alt="Techotsav 2026 Logo"
             className="h-32 sm:h-40 md:h-48 lg:h-56 w-auto"
           />
