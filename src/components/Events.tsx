@@ -116,6 +116,20 @@ const Events = () => {
                   </div>
                 )}
 
+                {"rulesUrl" in event && event.rulesUrl && (
+                  <div className="mb-4">
+                    <a
+                      href={event.rulesUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-primary/10 text-xs text-primary font-medium hover:bg-primary/20 transition-colors"
+                    >
+                      <Download size={12} />
+                      Download Rules
+                    </a>
+                  </div>
+                )}
+
                 <div className="border-t border-white/5 pt-3">
                   <p className="text-[10px] uppercase tracking-wider text-muted-foreground mb-1.5">
                     Coordinators

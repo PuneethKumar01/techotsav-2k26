@@ -139,6 +139,8 @@ export const EVENTS = [
       "AI Automation Tools",
       "Entertainment and Media Tech",
     ],
+    rulesUrl:
+      "https://docs.google.com/document/d/1xYMM4XfqhtM6qUu8p6ICjxN41Hh6ETZt/edit?usp=sharing&ouid=111455705726233629523&rtpof=true&sd=true",
     coordinators: [
       { name: "Nishitha", phone: "9353899056" },
       { name: "Adhitya", phone: "8320019796" },
@@ -156,7 +158,9 @@ export const RULES = [
   "Judge's decision is final and binding.",
 ];
 
-export const REGISTRATION_DEADLINE = "25th February 2026";
+export const REGISTRATION_DEADLINE = "1st March 2026";
+
+export const ONSPOT_REGISTRATION_DATE = "2nd March 2026";
 
 export const STAFF_COORDINATORS = [
   { name: "Mr. Sagar Rai", phone: "+91 8861520264" },

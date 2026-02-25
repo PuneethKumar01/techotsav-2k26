@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { CheckCircle2, AlertTriangle } from "lucide-react";
-import { RULES, REGISTRATION_DEADLINE } from "@/data/constants";
+import { RULES, REGISTRATION_DEADLINE, ONSPOT_REGISTRATION_DATE } from "@/data/constants";
 
 const container = {
   hidden: { opacity: 0 },
@@ -52,10 +52,16 @@ const Rules = () => {
             className="glass-strong px-5 py-4 flex items-start gap-4 neon-border mt-6"
           >
             <AlertTriangle size={18} className="text-primary shrink-0 mt-0.5 animate-pulse-neon" />
-            <p className="text-sm md:text-base text-foreground font-semibold">
-              Last date for registration:{" "}
-              <span className="text-primary">{REGISTRATION_DEADLINE}</span>
-            </p>
+            <div className="space-y-1">
+              <p className="text-sm md:text-base text-foreground font-semibold">
+                Last date for online registration:{" "}
+                <span className="text-primary">{REGISTRATION_DEADLINE}</span>
+              </p>
+              <p className="text-sm md:text-base text-foreground font-semibold">
+                On-spot registration available on:{" "}
+                <span className="text-primary">{ONSPOT_REGISTRATION_DATE}</span>
+              </p>
+            </div>
           </motion.div>
         </motion.div>
       </div>
