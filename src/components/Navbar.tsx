@@ -47,11 +47,16 @@ const Navbar = () => {
                 {link.label}
               </Link>
             ))}
-            <Link to="footer" smooth duration={500} className="cursor-pointer ml-2">
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSf9zqtCMsWgwKLnxp-Q4S0y9v55yKYFoT8VX46BrwparwMeFw/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ml-2"
+            >
               <button className="relative px-5 py-2 rounded-lg font-display text-xs font-semibold tracking-wider text-primary-foreground bg-gradient-to-r from-primary to-secondary hover:shadow-[0_0_25px_hsl(var(--primary)/0.5)] transition-shadow duration-300">
                 REGISTER NOW
               </button>
-            </Link>
+            </a>
           </div>
 
           {/* Mobile Toggle */}
@@ -87,11 +92,16 @@ const Navbar = () => {
                   {link.label}
                 </Link>
               ))}
-              <Link to="footer" smooth duration={500} onClick={() => setIsOpen(false)} className="cursor-pointer">
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSf9zqtCMsWgwKLnxp-Q4S0y9v55yKYFoT8VX46BrwparwMeFw/viewform"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsOpen(false)}
+              >
                 <button className="w-full mt-2 px-5 py-3 rounded-lg font-display text-xs font-semibold tracking-wider text-primary-foreground bg-gradient-to-r from-primary to-secondary">
                   REGISTER NOW
                 </button>
-              </Link>
+              </a>
             </div>
           </motion.div>
         )}

@@ -8,6 +8,7 @@ const FOOTER_LINKS = [
     href: "https://docs.google.com/forms/d/e/1FAIpQLSf9zqtCMsWgwKLnxp-Q4S0y9v55yKYFoT8VX46BrwparwMeFw/viewform",
     icon: ClipboardList,
     color: "hover:shadow-[0_0_20px_hsl(var(--primary)/0.4)]",
+    highlight: true,
   },
   {
     label: "Get Directions",
@@ -57,23 +58,40 @@ const Footer = () => {
           transition={{ type: "spring", stiffness: 100, delay: 0.1 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-5 mb-14"
         >
-          {FOOTER_LINKS.map(({ label, href, icon: Icon, color }) => (
-            <a
-              key={label}
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`glass group flex items-center gap-3 px-6 py-4 rounded-xl transition-all duration-300 hover:scale-105 ${color}`}
-            >
-              <Icon
-                size={22}
-                className="text-primary group-hover:text-foreground transition-colors"
-              />
-              <span className="text-sm font-medium text-muted-foreground group-hover:text-foreground transition-colors">
-                {label}
-              </span>
-            </a>
-          ))}
+          {FOOTER_LINKS.map(({ label, href, icon: Icon, color, ...rest }) => {
+            const isHighlight = "highlight" in rest && rest.highlight;
+            return (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`group flex items-center gap-3 px-6 py-4 rounded-xl transition-all duration-300 hover:scale-105 ${
+                  isHighlight
+                    ? "bg-gradient-to-r from-primary to-secondary shadow-[0_0_25px_hsl(var(--primary)/0.3)] hover:shadow-[0_0_35px_hsl(var(--primary)/0.5)]"
+                    : `glass ${color}`
+                }`}
+              >
+                <Icon
+                  size={22}
+                  className={
+                    isHighlight
+                      ? "text-primary-foreground"
+                      : "text-primary group-hover:text-foreground transition-colors"
+                  }
+                />
+                <span
+                  className={`text-sm font-medium transition-colors ${
+                    isHighlight
+                      ? "text-primary-foreground font-display font-bold tracking-wider"
+                      : "text-muted-foreground group-hover:text-foreground"
+                  }`}
+                >
+                  {label}
+                </span>
+              </a>
+            );
+          })}
         </motion.div>
 
         <motion.div
