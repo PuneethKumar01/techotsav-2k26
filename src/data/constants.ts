@@ -140,7 +140,7 @@ export const EVENTS = [
       "Entertainment and Media Tech",
     ],
     rulesUrl:
-      "https://docs.google.com/document/d/1xYMM4XfqhtM6qUu8p6ICjxN41Hh6ETZt/edit?usp=sharing&ouid=111455705726233629523&rtpof=true&sd=true",
+      "https://docs.google.com/document/d/130-h_u2tjuqpcZt8uJRNtSsFT5Jv3pmh/edit?usp=sharing&ouid=111455705726233629523&rtpof=true&sd=true",
     coordinators: [
       { name: "Nishitha", phone: "9353899056" },
       { name: "Adhitya", phone: "8320019796" },
